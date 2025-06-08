@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="Reach the best web development company for custom websites, e-commerce solutions, and SEO services. Get a free consultation today!" />
+        <meta name="author" content />
+        <title>Contact Us – Get a Free Web Development Quote | AGSK Tech</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="/assets/logo favico.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="/css/styles.css" rel="stylesheet" />
+        <link rel="stylesheet" href="/css/career.css">
+    </head>
+    <body class="d-flex flex-column">
+        <main class="flex-shrink-0">
+            <!-- Navigation-->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-1 sticky-top">
+                <div class="container px-3">
+                    <div class="">
+                        <a class="navbar-brand" href="/index.html">
+                            <img src="/assets/img/logo.png" alt="Bootstrap" width="50" height="50" class="d-inline-block align-text-top">
+                        </a>
+                    </div>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/about.html">About</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/services.html">Services</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/Career.html">Career</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/pricing.html">Pricing</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/faq.html">FAQ</a></li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" id="navbarDropdownBlog" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Blog</a>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownBlog">
+                                    <li><a class="dropdown-item" href="/blog-home.html">Blog Home</a></li>
+                                    <li><a class="dropdown-item" href="/blog-post.html">Blog Post</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" id="navbarDropdownPortfolio" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Portfolio</a>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownPortfolio">
+                                    <li><a class="dropdown-item" href="/portfolio-overview.html">Portfolio Overview</a></li>
+                                    <li><a class="dropdown-item" href="/portfolio-item.html">Portfolio Item</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- Page content-->
+            <section class="py-2">
+                <figure class="text-center py-5">
+                    <blockquote class="blockquote">
+                        <h1 class="fw-bolder fw-italic">
+                            Career opportunities at AGSK Tech
+                        </h1>
+                    </blockquote>
+                    <figcaption class="blockquote-footer">
+                        Feel free to express your <cite title="concerns with us">concerns with us.</cite>
+                    </figcaption>
+                </figure>
+                <div class="container px-5">
+                    <!-- career form -->
+                    <div class="bg-light rounded-3 py-5 px-md-5 mb-5" id="career">
+                        <div class="row gx-5 justify-content-center">
+                            <div class="text-center mb-5">
+                                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-person"></i></div>
+                                <h1 class="fw-bolder">Career form</h1>
+                                <p class="lead fw-normal text-muted mb-0">Feel free to express your concerns with us.</p>
+                            </div>
+                            <div class="col-lg-8 col-xl-6">
+                                <form class="form" id="careerForm">
+                                    <!-- name -->
+                                    <div class="mb-3">
+                                        <label for="fname" class="form-label">Full Name</label>
+                                        <input type="text" class="form-control" id="fname" required> 
+                                    </div>
+                                    <!-- i am a -->
+                                    <div class="mb-3">
+                                        <label for="iama" class="form-label">I am a</label>
+                                        <select class="form-select" id="iama" onchange="iamavalue()" required>
+                                            <option value="" disabled selected>Select your option</option>
+                                            <option value="college student">college student</option>
+                                            <option value="fresher">fresher</option>
+                                            <option value="working professional">working professional</option>
+                                            <option value="other">other</option>
+                                        </select>
+                                    </div>
+                                    <!-- other input -->
+                                    <div class="mb-3" style="display: none;" id="otherInput">
+                                        <label for="other" class="form-label">If other, please specify</label>
+                                        <input type="text" class="form-control" id="other">
+                                    </div>
+                                    <!-- working input -->
+                                    <div class="mb-3" style="display: none;" id="workingInput">
+                                        <label for="jobtitle" class="form-label">Job Title</label>
+                                        <input type="text" class="form-control" id="jobtitle">
+                                    </div>
+                                    <!-- collage input -->
+                                    <div class="mb-3" style="display: none;" id="collageInput">
+                                        <label for="clgyer" class="form-label">College Year</label>
+                                        <select class="form-select" id="clgyer" >
+                                            <option value="" disabled selected>Select your option</option>
+                                            <option value="2nd year">2nd year</option>
+                                            <option value="3rd year">3rd year</option>
+                                            <option value="4th year">4th year</option>
+                                        </select>
+                                    </div>
+                                    <!-- dep -->
+                                    <div class="mb-3" style="display: none;" id="depInput">
+                                        <label for="dep" class="form-label">Department</label>
+                                        <select class="form-select" id="dep" >
+                                            <option value="" disabled selected>Select your option</option>
+                                            <option value="CSE">CSE</option>
+                                            <option value="ECE">ECE</option>
+                                            <option value="EEE">EEE</option>
+                                            <option value="MECH">MECH</option>
+                                            <option value="CIVIL">CIVIL</option>
+                                            <option value="IT">IT</option>
+                                            <option value="other">other</option>
+                                        </select>
+                                    </div>
+                                    <!-- looking for -->
+                                    <div class="mb-3" style="display: none;" id="collagelooking">
+                                        <label for="lookingfor" class="form-label">Looking for</label>
+                                        <select class="form-select" id="lookingclg" >
+                                            <option value="" disabled selected>Select your option</option>
+                                            <option value="training">training</option>
+                                            <option value="internship">internship</option>
+                                            <option value="Job">Job</option>
+                                            <option value="other">other</option>
+                                        </select>
+                                    </div>
+                                    <!-- fresher input -->
+                                    <div class="mb-3" style="display: none;" id="fresherInput">
+                                        <label for="fresher" class="form-label">looking for</label>
+                                        <select class="form-select" id="lookingfor" >
+                                            <option value="" disabled selected>Select your option</option>
+                                            <option value="training">training</option>
+                                            <option value="internship">internship</option>
+                                            <option value="internship and job">internship and job</option>
+                                            <option value="Job">Job</option>
+                                        </select>
+                                    </div>
+                                    <!-- phone number -->
+                                    <div class="mb-3">
+                                        <label for="pnumber" class="form-label">Phone Number</label>
+                                        <input type="text" class="form-control" id="pnumber" required>                                 
+                                    </div>
+                                    <!-- email -->
+                                    <div class="mb-3">
+                                        <label for="emailid" class="form-label">Email address</label>
+                                        <input type="email" class="form-control" id="emailid" required>                                     
+                                    </div>
+                                    
+                                    <button type="button" onclick="validatetheform()" class="btn btn-primary w-100">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- job posting -->
+            <section class="py-2" id="jobpost">
+                <div class="container px-5">
+                    <div class="text-center mb-5">
+                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-briefcase"></i></div>
+                        <h1 class="fw-bolder">Job Postings</h1>
+                        <p class="lead fw-normal text-muted mb-0">Explore our current job openings and apply today!</p>
+                    </div>
+                    <div class="row gx-5">
+                        <!-- WEB devloper -->
+                        <div class="card">
+                            <h5 class="card-header">
+                                Front Developer 
+                            </h5>
+                            <div class="card-body">
+                                <div>
+                                    <h5 class="card-title">
+                                    Frontend Developer
+                                    </h5>
+                                    <p class="card-text">
+                                        We are looking for a skilled Frontend Developer to join our team. The ideal candidate should have a strong understanding of web technologies and a passion for creating user-friendly interfaces.
+                                    </p>
+                                </div>
+                                <div class="mb-3">
+                                    <strong>Responsibilities:</strong>
+                                    <ul>
+                                        <li>Develop and maintain web applications using HTML, CSS, and JavaScript.</li>
+                                        <li>Collaborate with designers to implement responsive designs.</li>
+                                        <li>Optimize applications for maximum speed and scalability.</li>
+                                    </ul>                    
+                                </div>
+                                <a href="#" class="btn btn-primary">More details</a>
+                                <button class="btn btn-success">Apply now</button>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+        <!-- Footer-->
+        <footer class="bg-dark py-4 mt-auto">
+            <div class="container px-5">
+                <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                    <div class="col-auto"><div class="small m-0 text-white">Copyright &copy; All Rights Reserved at AGSK Tech</div></div>
+                    <div class="col-auto">
+                        <a class="link-light small" href="#!">Privacy</a>
+                        <span class="text-white mx-1">&middot;</span>
+                        <a class="link-light small" href="#!">Terms</a>
+                        <span class="text-white mx-1">&middot;</span>
+                        <a class="link-light small" href="#!">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- aleart box -->
+        <script src="https://cdn.jsdelivr.net/gh/noumanqamar450/alertbox@main/version/1.0.2/alertbox.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <script src="/js/contact.js"></script>
+        <script src="/js/Career.js"></script>
+        <script src="/js/apis.js"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        
+    </body>
+</html>
