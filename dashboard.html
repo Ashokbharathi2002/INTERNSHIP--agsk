@@ -106,11 +106,14 @@
                                 <h2>Join the Meeting</h2>
                                 <p class="lead">Click the button below to join the meeting.</p>
                                 <!-- get user name -->
-                                <div class="mb-3">
-                                    <label for="meetEmployeeID" class="form-label">Employee ID</label>
-                                    <input type="text" class="form-control" id="meetEmployeeID" placeholder="Enter your name" required>
-                                </div>
-                                <button type="button" onclick="Meetingsuccess()" class="btn btn-primary">Join Meeting</button>
+                                <form action="https://meet.google.com/xck-bzsp-saz" target="_blank" method="post">
+                                    <div class="mb-3">
+                                        <label for="meetEmployeeID" class="form-label">Employee ID</label>
+                                        <input type="text" class="form-control" id="meetEmployeeID" placeholder="Enter your name" required>
+                                    </div>
+                                    <button type="submit" onclick="Meetingsuccess()" class="btn btn-primary">Join Meeting</button>
+                                </form>
+                                
                             </div>
                         </div>
                         <div class="modal-footer">
