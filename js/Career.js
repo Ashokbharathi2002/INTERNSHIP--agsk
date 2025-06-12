@@ -51,3 +51,43 @@ function iamavalue() {
     }
 
 }
+// show form
+document.getElementById("career").style.display = "none";
+function showcareerform() {
+    document.getElementById("career").style.display = "block";
+    // document.getElementById("careerbtn").style.display = "none";
+    document.getElementById("career").scrollIntoView({ behavior: 'smooth' });
+}
+// phone number validation
+function verpnumber() {
+    var phoneNumber = document.getElementById("pnumber").value;
+    var ple = phoneNumber.length;
+    console.log(ple);
+
+    if (ple == 10) {
+        document.getElementById("phoneSuccess").style.display = "block";
+        document.getElementById("phoneError").style.display = "none";
+        return true; // No error if the field is empty
+    }
+    else{
+        document.getElementById("phoneError").style.display = "block";
+        document.getElementById("phoneSuccess").style.display = "none";
+        return false; // Error if the field is not empty
+    }
+}
+// email validation
+function veremail() {
+    var email = document.getElementById("emailid").value;
+
+    var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{3,}$/;
+
+    if (emailPattern.test(email)) {
+        document.getElementById("emailSuccess").style.display = "block";
+        document.getElementById("emailError").style.display = "none";
+        return true; // No error if the field is empty
+    } else {
+        document.getElementById("emailError").style.display = "block";
+        document.getElementById("emailSuccess").style.display = "none";
+        return false; // Error if the field is not empty
+    }
+}

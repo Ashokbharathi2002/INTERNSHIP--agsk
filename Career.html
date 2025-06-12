@@ -122,6 +122,7 @@
                                             <option value="MECH">MECH</option>
                                             <option value="CIVIL">CIVIL</option>
                                             <option value="IT">IT</option>
+                                            <hr>
                                             <option value="other">other</option>
                                         </select>
                                     </div>
@@ -150,16 +151,59 @@
                                     <!-- phone number -->
                                     <div class="mb-3">
                                         <label for="pnumber" class="form-label">Phone Number</label>
-                                        <input type="text" class="form-control" id="pnumber" required>                                 
+                                        <input type="number" class="form-control" id="pnumber" oninput="verpnumber()" required>   
+                                        <span id="phoneError" style="color: red; display: none;">Please enter a valid 10-digit phone number.</span>
+                                        <span id="phoneSuccess" style="color: green; display: none;">Phone number is valid.</span>
+                                                                     
                                     </div>
                                     <!-- email -->
                                     <div class="mb-3">
                                         <label for="emailid" class="form-label">Email address</label>
-                                        <input type="email" class="form-control" id="emailid" required>                                     
+                                        <input type="email" class="form-control" oninput="veremail()" id="emailid" required>
+                                        <span id="emailError" style="color: red; display: none;">Please enter a valid email address.</span>
+                                        <span id="emailSuccess" style="color: green; display: none;">Email address is valid.</span>
                                     </div>
                                     
                                     <button type="button" onclick="validatetheform()" class="btn btn-primary w-100">Submit</button>
                                 </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Internship offer -->
+            <section class="py-2" id="internship">
+                <div class="container px-5">
+                    <div class="text-center mb-5">
+                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-lightbulb"></i></div>
+                        <h1 class="fw-bolder">Internship Offer</h1>
+                        <p class="lead fw-normal text-muted mb-0">Join us for an exciting internship opportunity!</p>
+                    </div>
+                    <div class="row gx-5">
+                        <!-- Internship offer card -->
+                        <div class="card">
+                            <h5 class="card-header">
+                                Internship Offer
+                            </h5>
+                            <div class="card-body">
+                                <div>
+                                    <h5 class="card-title">
+                                    Internship at AGSK Tech
+                                    </h5>
+                                    <p class="card-text">
+                                        We are offering an internship opportunity for students and freshers. This is a great chance to gain hands-on experience in web development and related technologies.
+                                    </p>
+                                </div>
+                                <div class="mb-3">
+                                    <strong>Responsibilities:</strong>
+                                    <ul>
+                                        <li>Assist in the development of web applications.</li>
+                                        <li>Collaborate with the team on various projects.</li>
+                                        <li>Learn and implement new technologies.</li>
+                                    </ul>
+                                </div>
+                                <a href="#" class="btn btn-primary">More details</a>
+                                <button class="btn btn-success" onclick="showcareerform()">Apply now</button>
                             </div>
                         </div>
                     </div>
@@ -206,6 +250,8 @@
                 </div>
             </section>
         </main>
+        <!-- MODELS -->
+         
         <!-- Footer-->
         <footer class="bg-dark py-4 mt-auto">
             <div class="container px-5">
