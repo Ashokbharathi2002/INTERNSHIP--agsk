@@ -87,6 +87,9 @@
                             </div>
                             <!-- college student form -->
                             <div class="py-4" id="collegeForm" style="display: none;">
+                                <h4>
+                                    College Student Career Form
+                                </h4>
                                 <form class="form">
                                     <!-- name -->
                                     <div class="mb-3">
@@ -151,16 +154,133 @@
                                     </div>
                                     <button type="button" onclick="clgstudend()" class="btn btn-primary w-100">Submit</button>
                                 </form>
-                                    
+                            </div>
+                            <!-- fresher form -->
+                            <div class="py-4" id="fresherForm" style="display: none;">
+                                <h4>
+                                    Fresher Career Form
+                                </h4>
+                                <form class="form">
+                                    <!-- name -->
+                                    <div class="mb-3">
+                                        <label for="cadname" class="form-label">Full Name</label>
+                                        <input type="text" class="form-control" id="cadname" required>
+                                    </div>
+                                    <!-- collage name -->
+                                    <div class="mb-3">
+                                        <label for="clgname" class="form-label">College Name</label>
+                                        <input type="text" class="form-control" id="clgname" required>
+                                    </div>
+                                    <!-- clg dep -->
+                                    <div class="mb-3">
+                                        <label for="dep" class="form-label">Department</label>
+                                        <select class="form-select" id="dep" >
+                                            <option value="" disabled selected>Select your option</option>
+                                            <option value="CSE">CSE</option>
+                                            <option value="ECE">ECE</option>
+                                            <option value="EEE">EEE</option>
+                                            <option value="MECH">MECH</option>
+                                            <option value="CIVIL">CIVIL</option>
+                                            <option value="IT">IT</option>
+                                            <option value="AI&DS">AI&DS</option>
+                                            <hr>
+                                            <option value="other">other</option>
+                                        </select>
+                                    </div>
+                                    <!-- looking for -->
+                                    <div class="mb-3">
+                                        <label for="lookingfrsh" class="form-label">Looking for</label>
+                                        <select class="form-select" id="lookingfrsh" >
+                                            <option value="" disabled selected>Select your option</option>
+                                            <option value="training">training</option>
+                                            <option value="internship">internship</option>
+                                            <option value="Job">Job</option>
+                                            <option value="other">other</option>
+                                        </select>
+                                    </div>
+                                    <!-- phone number -->
+                                    <div class="mb-3">
+                                        <label for="pnumber" class="form-label">Phone Number</label>
+                                        <input type="number" class="form-control" id="pnumber" oninput="verpnumber()" required>   
+                                        <span id="phoneError" style="color: red; display: none;">Please enter a valid 10-digit phone number.</span>
+                                        <span id="phoneSuccess" style="color: green; display: none;">Phone number is valid.</span>
+                                    </div>
+                                    <!-- email -->
+                                    <div class="mb-3">
+                                        <label for="emailid" class="form-label">Email address</label>
+                                        <input type="email" class="form-control" oninput="veremail()" id="emailid" required>
+                                        <span id="emailError" style="color: red; display: none;">Please enter a valid email address.</span>
+                                        <span id="emailSuccess" style="color: green; display: none;">Email address is valid.</span>
+                                    </div>
+                                    <button type="button" onclick="fresherform()" class="btn btn-primary w-100">Submit</button>
+                                </form>
+                            </div>
+                            <!-- working professional form -->
+                            <div class="py-4" id="workingForm" style="display: none;">
+                                <h4>
+                                    Working Professional Career Form
+                                </h4>
+                                <form class="form">
+                                    <!-- name -->
+                                    <div class="mb-3">
+                                        <label for="cadname" class="form-label">Full Name</label>
+                                        <input type="text" class="form-control" id="cadname" required>
+                                    </div>
+                                    <!-- company name -->
+                                    <div class="mb-3">
+                                        <label for="companyname" class="form-label">Company Name</label>
+                                        <input type="text" class="form-control" id="companyname" required>
+                                    </div>
+                                    <!-- job title -->
+                                    <div class="mb-3">
+                                        <label for="jobtitle" class="form-label">Job Title</label>
+                                        <input type="text" class="form-control" id="jobtitle" required>
+                                    </div>
+                                    <!-- years of experience -->
+                                    <div class="mb-3">
+                                        <label for="experience" class="form-label">Years of Experience</label>
+                                        <input type="number" class="form-control" id="experience" required>
+                                    </div>
+                                    <!-- looking for -->
+                                    <div class="mb-3">
+                                        <label for="lookingpro" class="form-label">Looking for</label>
+                                        <select class="form-select" id="lookingpro" >
+                                            <option value="" disabled selected>Select your option</option>
+                                            <option value="training">training</option>
+                                            <option value="internship">internship</option>
+                                            <option value="Job">Job</option>
+                                            <option value="other">other</option>
+                                        </select>
+                                    </div>
+                                    <!-- phone number -->
+                                    <div class="mb-3">
+                                        <label for="pnumber" class="form-label">Phone Number</label>
+                                        <input type="number" class="form-control" id="pnumber" oninput="verpnumber()" required>   
+                                        <span id="phoneError" style="color: red; display: none;">Please enter a valid 10-digit phone number.</span>
+                                        <span id="phoneSuccess" style="color: green; display: none;">Phone number is valid.</span>
+                                    </div>
+                                    <!-- email -->
+                                    <div class="mb-3">
+                                        <label for="emailid" class="form-label">Email address</label>
+                                        <input type="email" class="form-control" oninput="veremail()" id="emailid" required>
+                                        <span id="emailError" style="color: red; display: none;">Please enter a valid email address.</span>
+                                        <span id="emailSuccess" style="color: green; display: none;">Email address is valid.</span>
+                                    </div>
+                                    <button type="button" onclick="workingform()" class="btn btn-primary w-100">Submit</button>
+                                </form>
+                            </div>
+                                  
                         </div>
                     </div>
-                    <!-- submit sucess msg -->
-                    <div id="successMessage" class="alert alert-success mt-3 w-50 m-auto" style="display: none;">
-                        <strong>Success!</strong> Your career form has been submitted successfully.
-                        <h4>
-                            Hello <span id="cadname"></span>, you have registered for the internship program. Your internship is scheduled to begin on July 1.ishing you all the best for your internship.
-                        </h4>
-                    </div>
+                    
+                    
+                </div>
+                <!-- submit sucess msg -->
+                <div id="successMessage" class="alert alert-success mt-3 w-50 m-auto" style="display: none;">
+                    <strong>Success!</strong> Your career form has been submitted successfully.
+                    <h4>
+                        Hello <span id="cadname"></span>, you have registered for the internship program. Your internship is scheduled to begin on July 1.ishing you all the best for your internship.
+                    </h4>
                 </div>
             </section>
             <!-- Internship offer -->

@@ -29,6 +29,7 @@ function validatetheform(){
 }
 
 // get for career form send telegram message
+// siudent form
 function clgstudend(){
     // get the user data from the form
     var name = document.getElementById("cadname").value;
@@ -78,6 +79,9 @@ function clgstudend(){
                 btnTitle: 'Ok',
                 border:true
             });
+            // showw the success message
+            document.getElementById("career").style.display = "none";
+            document.getElementById("successMessage").style.display = "block";
         } else {
             alert('Failed to send order details to Telegram.');
         }
@@ -85,6 +89,83 @@ function clgstudend(){
     .catch(error => {
         console.error('Error:', error);
     });
+}
+// fresher form
+function fresherform() {
+    // get the user data from the form
+    var name = document.getElementById("cadname").value;
+    var email = document.getElementById("emailid").value;
+    var phone = document.getElementById("pnumber").value;
+    var department = document.getElementById("dep").value;
+    var fresherlookingfor = document.getElementById("lookingfrsh").value;
+    var collagename = document.getElementById("clgname").value;
+    // chacking all the fields are filled
+    if (name == "" || email == "" || phone == "" || department == "" || fresherlookingfor == "" || collagename == "") {
+        alertbox.render({
+            alertIcon: 'error',
+            title: 'Error!',
+            message: 'Please fill all the fields.',
+            btnTitle: 'Ok',
+            border:true
+        });
+        return false;
+    }
+    fetch('https://api.telegram.org/bot7233018879:AAGKG3ZQhH9j0W4jC-gy50557C5ocR1_p_8/sendMessage', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            chat_id: '7785896124',
+            text: "fresher form\n" +
+                  "Name: _" + name + "\n" +
+                  "Email: _" + email + "\n" +
+                  "Phone: _" + phone + "\n" +
+                  "Department: _" + department + "\n" +
+                  "Fresher Looking For: _" + fresherlookingfor + "\n" +
+                  "Collage Name: _" + collagename + "\n"
+        })
+    })
+
+}
+// working professional form
+function workingform() {
+    // get the user data from the form
+    var name = document.getElementById("cadname").value;
+    var email = document.getElementById("emailid").value;
+    var phone = document.getElementById("pnumber").value;
+    var department = document.getElementById("dep").value;
+    var workinglookingfor = document.getElementById("lookingwrk").value;
+    var companyname = document.getElementById("cmpname").value;
+
+    // chacking all the fields are filled
+    if (name == "" || email == "" || phone == "" || department == "" || workinglookingfor == "" || companyname == "") {
+        alertbox.render({
+            alertIcon: 'error',
+            title: 'Error!',
+            message: 'Please fill all the fields.',
+            btnTitle: 'Ok',
+            border:true
+        });
+        return false;
+    }
+
+    fetch('https://api.telegram.org/bot7233018879:AAGKG3ZQhH9j0W4jC-gy50557C5ocR1_p_8/sendMessage', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            chat_id: '7785896124',
+            text: "working professional form\n" +
+                  "Name: _" + name + "\n" +
+                  "Email: _" + email + "\n" +
+                  "Phone: _" + phone + "\n" +
+                  "Department: _" + department + "\n" +
+                  "Working Looking For: _" + workinglookingfor + "\n" +
+                  "Company Name: _" + companyname + "\n"
+        })
+    })
 }
 
 
