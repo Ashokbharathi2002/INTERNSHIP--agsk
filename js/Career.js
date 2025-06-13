@@ -91,3 +91,38 @@ function veremail() {
         return false; // Error if the field is not empty
     }
 }
+// find form
+function findform() {
+    // get a studend form
+    var find = document.getElementById("findform").value;
+
+    if (find == "college student") {
+        document.getElementById("collegeForm").style.display = "block";
+        document.getElementById("fresherForm").style.display = "none";
+        document.getElementById("workingForm").style.display = "none";
+    }
+    else if (find == "fresher") {
+        document.getElementById("collegeForm").style.display = "none";
+        document.getElementById("fresherForm").style.display = "block";
+        document.getElementById("workingForm").style.display = "none";
+    }
+    else if (find == "working professional") {
+        document.getElementById("collegeForm").style.display = "none";
+        document.getElementById("fresherForm").style.display = "none";
+        document.getElementById("workingForm").style.display = "block";
+    }
+    else if (find == "other") {
+        document.getElementById("collegeForm").style.display = "none";
+        document.getElementById("fresherForm").style.display = "none";
+        document.getElementById("workingForm").style.display = "none";
+    }
+    else {
+        alertbox.render({
+            alertIcon: 'error',
+            title: 'Error!',
+            message: 'Please select a valid option.',
+            btnTitle: 'Ok',
+            border:true
+        });
+    }
+}

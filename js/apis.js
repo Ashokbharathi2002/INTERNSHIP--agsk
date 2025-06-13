@@ -28,81 +28,20 @@ function validatetheform(){
 
 }
 
-function careerdata() {
+// get for career form send telegram message
+function clgstudend(){
     // get the user data from the form
-    var name = document.getElementById("fname").value;
+    var name = document.getElementById("cadname").value;
     var email = document.getElementById("emailid").value;
     var phone = document.getElementById("pnumber").value;
-
-    var iam = document.getElementById("iama").value;
-
+    var clgname = document.getElementById("clgname").value;
     var clgyear = document.getElementById("clgyer").value;
-
     var clgbranch = document.getElementById("dep").value;
-
     var clglookingfor = document.getElementById("lookingclg").value;
 
-    // dend the data in to telegram
-    var message = 
-        "Name: _" + name + "\n" +
-        "Email: _" + email + "\n" +
-        "Phone: _" + phone + "\n" +
-        "I am a: _" + iam + "\n" +
-        "College Year: _" + clgyear + "\n" +
-        "College Branch: _" + clgbranch + "\n" +
-        "College Looking For: _" + clglookingfor + "\n" 
-    //
-    
-    // check if the fields is true
-    if (name = true ) {
-        
-        // send the data to telegram
-        fetch('https://api.telegram.org/bot7233018879:AAGKG3ZQhH9j0W4jC-gy50557C5ocR1_p_8/sendMessage', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                chat_id: '7785896124',
-                text: message,
-            })
-        })
-        .then(response => {
-            if (response.ok) {
-                alertbox.render({
-                    alertIcon: 'success',
-                    title: 'Thank You!',
-                    message: 'Your Requst Will be submited.',
-                    btnTitle: 'Ok',
-                    border:true
-                });
-                // go to home page after 5 seconds
-                setTimeout(() => {
-                    window.location.href = 'index.html';
-                }, 5000);
-            } else {
-                alert('Failed to send order details to Telegram.');
-                alertbox.render({
-                    alertIcon: 'info',
-                    title: 'Thank You!',
-                    message: 'Your order was filed. Check your Internet connection and try again.',
-                    btnTitle: 'Ok',
-                    border:true
-                });
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            alertbox.render({
-                alertIcon: 'error',
-                title: 'Error!',
-                message: 'There was an error sending your request. Please try again later.',
-                btnTitle: 'Ok',
-                border:true
-            });
-        });
-    }
-    else {
+
+    // chacking all the fields are filled
+    if (name == "" || email == "" || phone == "" || clgname == "" || clgyear == "" || clgbranch == "" || clglookingfor == "") {
         alertbox.render({
             alertIcon: 'error',
             title: 'Error!',
@@ -110,10 +49,45 @@ function careerdata() {
             btnTitle: 'Ok',
             border:true
         });
-        
-       
+        return false;
     }
+
+    fetch('https://api.telegram.org/bot7233018879:AAGKG3ZQhH9j0W4jC-gy50557C5ocR1_p_8/sendMessage', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            chat_id: '7785896124',
+            text: "collafe student form\n" +
+                  "Name: _" + name + "\n" +
+                  "Email: _" + email + "\n" +
+                  "Phone: _" + phone + "\n" +
+                  "College Name: _" + clgname + "\n" +
+                  "College Year: _" + clgyear + "\n" +
+                  "College Branch: _" + clgbranch + "\n" +
+                  "College Looking For: _" + clglookingfor + "\n"
+        })
+    })
+    .then(response => {
+        if (response.ok) {
+            alertbox.render({
+                alertIcon: 'success',
+                title: 'Thank You!',
+                message: 'Your Requst Will be submited.',
+                btnTitle: 'Ok',
+                border:true
+            });
+        } else {
+            alert('Failed to send order details to Telegram.');
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
 }
+
+
 
 // contend forms /////////////////////////////////////////////////////////////////////////////////////////////////
 

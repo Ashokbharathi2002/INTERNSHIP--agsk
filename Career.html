@@ -66,6 +66,7 @@
                 </figure>
                 <div class="container px-5">
                     <!-- career form -->
+                    <!-- NEW FORM -->
                     <div class="bg-light rounded-3 py-5 px-md-5 mb-5" id="career">
                         <div class="row gx-5 justify-content-center">
                             <div class="text-center mb-5">
@@ -73,36 +74,32 @@
                                 <h1 class="fw-bolder">Career form</h1>
                                 <p class="lead fw-normal text-muted mb-0">Feel free to express your concerns with us.</p>
                             </div>
+                            <!-- find form -->
                             <div class="col-lg-8 col-xl-6">
-                                <form class="form" id="careerForm">
+                                <h5>I am a </h5>
+                                <select class="form-select" id="findform" onchange="findform()" required>
+                                    <option value="" disabled selected>Select your option</option>
+                                    <option value="college student">college student</option>
+                                    <option value="fresher">fresher</option>
+                                    <option value="working professional">working professional</option>
+                                    <option value="other">other</option>
+                                </select>
+                            </div>
+                            <!-- college student form -->
+                            <div class="py-4" id="collegeForm" style="display: none;">
+                                <form class="form">
                                     <!-- name -->
                                     <div class="mb-3">
-                                        <label for="fname" class="form-label">Full Name</label>
-                                        <input type="text" class="form-control" id="fname" required> 
+                                        <label for="cadname" class="form-label">Full Name</label>
+                                        <input type="text" class="form-control" id="cadname" required>
                                     </div>
-                                    <!-- i am a -->
+                                    <!-- collage name -->
                                     <div class="mb-3">
-                                        <label for="iama" class="form-label">I am a</label>
-                                        <select class="form-select" id="iama" onchange="iamavalue()" required>
-                                            <option value="" disabled selected>Select your option</option>
-                                            <option value="college student">college student</option>
-                                            <option value="fresher">fresher</option>
-                                            <option value="working professional">working professional</option>
-                                            <option value="other">other</option>
-                                        </select>
+                                        <label for="clgname" class="form-label">College Name</label>
+                                        <input type="text" class="form-control" id="clgname" required>
                                     </div>
-                                    <!-- other input -->
-                                    <div class="mb-3" style="display: none;" id="otherInput">
-                                        <label for="other" class="form-label">If other, please specify</label>
-                                        <input type="text" class="form-control" id="other">
-                                    </div>
-                                    <!-- working input -->
-                                    <div class="mb-3" style="display: none;" id="workingInput">
-                                        <label for="jobtitle" class="form-label">Job Title</label>
-                                        <input type="text" class="form-control" id="jobtitle">
-                                    </div>
-                                    <!-- collage input -->
-                                    <div class="mb-3" style="display: none;" id="collageInput">
+                                    <!-- collage year -->
+                                    <div class="mb-3">
                                         <label for="clgyer" class="form-label">College Year</label>
                                         <select class="form-select" id="clgyer" >
                                             <option value="" disabled selected>Select your option</option>
@@ -111,8 +108,8 @@
                                             <option value="4th year">4th year</option>
                                         </select>
                                     </div>
-                                    <!-- dep -->
-                                    <div class="mb-3" style="display: none;" id="depInput">
+                                    <!-- clg dep -->
+                                    <div class="mb-3">
                                         <label for="dep" class="form-label">Department</label>
                                         <select class="form-select" id="dep" >
                                             <option value="" disabled selected>Select your option</option>
@@ -122,13 +119,14 @@
                                             <option value="MECH">MECH</option>
                                             <option value="CIVIL">CIVIL</option>
                                             <option value="IT">IT</option>
+                                            <option value="IT">AI&DS</option>
                                             <hr>
                                             <option value="other">other</option>
                                         </select>
                                     </div>
                                     <!-- looking for -->
-                                    <div class="mb-3" style="display: none;" id="collagelooking">
-                                        <label for="lookingfor" class="form-label">Looking for</label>
+                                    <div class="mb-3">
+                                        <label for="lookingclg" class="form-label">Looking for</label>
                                         <select class="form-select" id="lookingclg" >
                                             <option value="" disabled selected>Select your option</option>
                                             <option value="training">training</option>
@@ -137,24 +135,12 @@
                                             <option value="other">other</option>
                                         </select>
                                     </div>
-                                    <!-- fresher input -->
-                                    <div class="mb-3" style="display: none;" id="fresherInput">
-                                        <label for="fresher" class="form-label">looking for</label>
-                                        <select class="form-select" id="lookingfor" >
-                                            <option value="" disabled selected>Select your option</option>
-                                            <option value="training">training</option>
-                                            <option value="internship">internship</option>
-                                            <option value="internship and job">internship and job</option>
-                                            <option value="Job">Job</option>
-                                        </select>
-                                    </div>
                                     <!-- phone number -->
                                     <div class="mb-3">
                                         <label for="pnumber" class="form-label">Phone Number</label>
                                         <input type="number" class="form-control" id="pnumber" oninput="verpnumber()" required>   
                                         <span id="phoneError" style="color: red; display: none;">Please enter a valid 10-digit phone number.</span>
                                         <span id="phoneSuccess" style="color: green; display: none;">Phone number is valid.</span>
-                                                                     
                                     </div>
                                     <!-- email -->
                                     <div class="mb-3">
@@ -163,11 +149,17 @@
                                         <span id="emailError" style="color: red; display: none;">Please enter a valid email address.</span>
                                         <span id="emailSuccess" style="color: green; display: none;">Email address is valid.</span>
                                     </div>
-                                    
-                                    <button type="button" onclick="validatetheform()" class="btn btn-primary w-100">Submit</button>
+                                    <button type="button" onclick="clgstudend()" class="btn btn-primary w-100">Submit</button>
                                 </form>
-                            </div>
+                                    
                         </div>
+                    </div>
+                    <!-- submit sucess msg -->
+                    <div id="successMessage" class="alert alert-success mt-3 w-50 m-auto" style="display: none;">
+                        <strong>Success!</strong> Your career form has been submitted successfully.
+                        <h4>
+                            Hello <span id="cadname"></span>, you have registered for the internship program. Your internship is scheduled to begin on July 1.ishing you all the best for your internship.
+                        </h4>
                     </div>
                 </div>
             </section>
