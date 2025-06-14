@@ -78,66 +78,80 @@
                     </div>
                 </div>
             </header>
-            <!-- join to meeting -->
-            <section class="py-5">
+            <!-- login form -->
+            <section id="loginform" class="py-5">
                 <div class="container px-5">
                     <div class="row gx-5 align-items-center justify-content-center">
                         <div class="col-lg-8 col-xl-7 col-xxl-6">
-                            <div class="my-5 text-center text-xl-start">
-                                <h2 class="fw-bolder">Join to meeting</h2>
-                                <p class="lead fw-normal text-muted mb-5">Join our meeting to discuss your project requirements and get a personalized solution.</p>
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">joind the metting</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- meeting demo  -->
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="">
-                                <h2>Join the Meeting</h2>
-                                <p class="lead">Click the button below to join the meeting.</p>
-                                <!-- get user name -->
-                                <form action="https://meet.google.com/xck-bzsp-saz" target="_blank" method="post">
+                            <div class="my-5 text-xl-start">
+                                <h2 class="fw-bolder">Login to your account</h2>
+                                <p class="lead fw-normal text-muted mb-5">Please enter your credentials to access your account.</p>
+                                <form id="loginForm" method="post">
                                     <div class="mb-3">
-                                        <label for="meetEmployeeID" class="form-label">Employee ID</label>
-                                        <input type="text" class="form-control" id="meetEmployeeID" placeholder="Enter your name" required>
+                                        <label for="employeeID" class="form-label">Employee ID</label>
+                                        <input type="text" class="form-control" id="employeeID" name="employeeID" placeholder="Enter your Employee ID" required>
                                     </div>
-                                    <button type="submit" onclick="Meetingsuccess()" class="btn btn-primary">Join Meeting</button>
+                                    <div class="mb-3">
+                                        <label for="password" class="form-label">Password</label>
+                                        <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" required>
+                                    </div>
+                                    <button type="button" class="btn btn-primary" onclick="login()">Login</button>
                                 </form>
-                                
                             </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                             
                         </div>
                     </div>
                 </div>
-            </div>
-            <!-- Dashboard Section -->
-            <section class="py-5">
-                <div class="container px-5">
-                    <div class="row gx-5 align-items-center justify-content-center">
-                        <div class="col-lg-8 col-xl-7 col-xxl-6">
-                            <div class="my-5 text-center text-xl-start">
-                                <h2 class="fw-bolder">Dashboard</h2>
-                                <p class="lead fw-normal text-muted mb-5">Access your dashboard to manage your projects, view analytics, and more.</p>
-                                <a class="btn btn-primary btn-lg" href="/dashboard.html">Go to Dashboard</a>
+            </section>
+            <!-- dashboard contend -->
+            <section id="profile_info">
+                <div class="container text-center">
+                    <h2 class="fw-bolder">Dashboard</h2>
+                    <p class="lead fw-bolder mb-5">
+                        Welcome, <span id="nameto">name</span>, to your dashboard.
+                    </p>
+
+                    <div class="row g-2">
+                        <div class="col-6">
+                            <div class="p-3">
+                                <!-- metting join link -->
+                                <h4 class="fw-bolder" style="background-color: blueviolet;">Join to Meeting</h4>
+                                <form action="">
+                                    <div class="mb-3">
+                                        <label for="meetingLink" class="form-label">Meeting Link</label>
+                                        <input type="text" class="form-control" id="meetingLink" name="meetingLink" placeholder="Enter meeting link" required>
+                                    </div>
+                                    <button type="button" class="btn btn-primary" onclick="joinMeeting()">Join Meeting</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="p-3">
+                                <!-- your task  -->
+                                <h4 class="fw-bolder" style="background-color: blueviolet;">Your Task</h4>
+                                <!-- <button class="btn btn-secondary">your task</button> -->
+                                <h4 id="taskentery">Your Task</h4>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="p-3">
+                                <!-- your procus -->
+                                <h4 class="fw-bolder" style="background-color: blueviolet;">Your Procus</h4>
+                                <!-- <button class="btn btn-secondary">your procus</button> -->
+                                <h4 id="process">Your Procus</h4>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="p-3">
+                                <!-- menter name -->
+                                <h4 class="fw-bolder" style="background-color: blueviolet;">enter name</h4>
+                                <!-- <button class="btn btn-secondary">menter name</button> -->
+                                <h4 id="mentername">Menter Name</h4>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
-            
+            </section> 
         </main>
         <!-- Footer-->
         <footer class="bg-dark py-4 mt-auto">
@@ -158,5 +172,8 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="/client/js/scripts.js"></script>
+        <script src="/js/dashboard.js"></script>
+        <!-- aleart box -->
+        <script src="https://cdn.jsdelivr.net/gh/noumanqamar450/alertbox@main/version/1.0.2/alertbox.min.js"></script>
     </body>
 </html>

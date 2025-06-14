@@ -82,6 +82,7 @@ function clgstudend(){
             // showw the success message
             document.getElementById("career").style.display = "none";
             document.getElementById("successMessage").style.display = "block";
+            document.getElementById("").innerHTML = name;
         } else {
             alert('Failed to send order details to Telegram.');
         }
@@ -126,6 +127,22 @@ function fresherform() {
                   "Collage Name: _" + collagename + "\n"
         })
     })
+    .then(response => {
+        if (response.ok) {
+            alertbox.render({
+                alertIcon: 'success',
+                title: 'Thank You!',
+                message: 'Your Requst Will be submited.',
+                btnTitle: 'Ok',
+                border:true
+            });
+            // showw the success message
+            document.getElementById("career").style.display = "none";
+            document.getElementById("successMessage").style.display = "block";
+        } else {
+            alert('Failed to send order details to Telegram.');
+        }
+    })
 
 }
 // working professional form
@@ -165,6 +182,22 @@ function workingform() {
                   "Working Looking For: _" + workinglookingfor + "\n" +
                   "Company Name: _" + companyname + "\n"
         })
+    })
+    .then(response => {
+        if (response.ok) {
+            alertbox.render({
+                alertIcon: 'success',
+                title: 'Thank You!',
+                message: 'Your Requst Will be submited.',
+                btnTitle: 'Ok',
+                border:true
+            });
+            // showw the success message
+            document.getElementById("career").style.display = "none";
+            document.getElementById("successMessage").style.display = "block";
+        } else {
+            alert('Failed to send order details to Telegram.');
+        }
     })
 }
 
