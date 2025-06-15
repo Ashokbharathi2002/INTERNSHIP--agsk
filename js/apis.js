@@ -39,6 +39,8 @@ function clgstudend(){
     var clgyear = document.getElementById("clgyer").value;
     var clgbranch = document.getElementById("dep").value;
     var clglookingfor = document.getElementById("lookingclg").value;
+    var clggenger = document.getElementById("clggenger").value;
+    var sinname = document.getElementById("simname").value;
 
 
     // chacking all the fields are filled
@@ -64,6 +66,8 @@ function clgstudend(){
                   "Name: _" + name + "\n" +
                   "Email: _" + email + "\n" +
                   "Phone: _" + phone + "\n" +
+                  "sim Name: _" + sinname + "\n" +
+                  "gender: _" + clggenger + "\n" +
                   "College Name: _" + clgname + "\n" +
                   "College Year: _" + clgyear + "\n" +
                   "College Branch: _" + clgbranch + "\n" +

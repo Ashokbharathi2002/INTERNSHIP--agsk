@@ -1,5 +1,5 @@
 // hide a all section
-document.getElementById("profile_info").style.display = "none";
+// document.getElementById("profile_info").style.display = "none";
 
 // login function
 function login() {
@@ -49,7 +49,7 @@ function login() {
                 document.getElementById("profile_info").style.display = "block";
                 // get the profile info
                 // from json data
-                document.getElementById("meetingLink").value = intid;
+                document.getElementById("metemployee").value = intid;
                 // get name
                 document.getElementById("nameto").innerHTML = name;
                 // task
@@ -61,7 +61,10 @@ function login() {
                 // procusenter
                 var procusenter = (data.data.data[0].Progress);
                 // console.log("Progress: " + procusenter);
-                document.getElementById("process").innerHTML = procusenter;
+                // document.getElementById("process").innerHTML = procusenter;
+                // change the progress bar width
+                document.getElementById("plavel").innerHTML = procusenter + "%";
+                document.getElementById("pavlavel").value = procusenter;
 
                 // get fee fron json data
                 var fee = (data.data.data[0].fee_starters );
@@ -149,4 +152,52 @@ function sendmsgloginms() {
     .catch(error => {
         console.error('Error:', error);
     });
+}
+
+// metting join function
+function joinMeeting() {
+    var employee = document.getElementById("metemployee").value;
+
+    // check if the employee id is empty
+    if (employee.trim() === "") {
+        alertbox.render({
+            alertIcon: 'error',
+            title: 'Error!',
+            message: 'Please enter a valid Employee ID.',
+            btnTitle: 'Ok',
+            border:true
+        });
+        return;
+    }
+    // send telegram message
+    var message = 
+        "joind Meeting sucessfully\n" +
+        "Employee ID: _" + employee + "\n";
+    
+    fetch('https://api.telegram.org/bot7233018879:AAGKG3ZQhH9j0W4jC-gy50557C5ocR1_p_8/sendMessage', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            chat_id: '7785896124',
+            text: message,
+        })
+    })
+    .then(response => {
+        if (response.ok) {
+            console.log('Meeting link shared successfully.');
+            // meeting link
+            window.open("https://meet.google.com/mtu-bqzq-hqf", "_blank");
+        } else {
+            console.error('Failed to share meeting link.');
+            alertbox.render({
+                alertIcon: 'error',
+                title: 'Error!',
+                message: 'Failed to share meeting link.',
+                btnTitle: 'Ok',
+                border:true
+            });
+        }
+    })
 }
