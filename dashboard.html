@@ -2,300 +2,433 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="Leading web development company offering custom website design, e-commerce solutions, and SEO-friendly web development. Get a fast, secure, and mobile-responsive website today!" />
+        <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Top Web Development Company | Custom Website Design & Development Services</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="/assets/logo favico.ico" />
-        <!-- Bootstrap icons-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="/css/styles.css" rel="stylesheet" />
-        <link rel="stylesheet" href="/css/dashboard.css">
-        <!-- boostapp icons -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <title>Dashboard - SB Admin</title>
+        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
+        <link href="css/dashboard.css" rel="stylesheet" />
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     </head>
-    <body class="d-flex flex-column h-100">
-        <main class="flex-shrink-0">
-            <!-- Navigation-->
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-1 sticky-top">
-                <div class="container px-3">
-                    <div class="">
-                        <a class="navbar-brand" href="/index.html">
-                            <img src="/assets/img/logo.png" alt="Bootstrap" width="50" height="50" class="d-inline-block align-text-top">
-                        </a>
-                    </div>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                            <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="/about.html">About</a></li>
-                            <li class="nav-item"><a class="nav-link" href="/services.html">Services</a></li>
-                            <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
-                            <li class="nav-item"><a class="nav-link" href="/Career.html">Career</a></li>
-                            <li class="nav-item"><a class="nav-link" href="/index.html">logout</a></li>
-                            <!-- <li class="nav-item"><a class="nav-link" href="/faq.html">FAQ</a></li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" id="navbarDropdownBlog" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Blog</a>
-                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownBlog">
-                                    <li><a class="dropdown-item" href="/blog-home.html">Blog Home</a></li>
-                                    <li><a class="dropdown-item" href="/blog-post.html">Blog Post</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" id="navbarDropdownPortfolio" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Portfolio</a>
-                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownPortfolio">
-                                    <li><a class="dropdown-item" href="/portfolio-overview.html">Portfolio Overview</a></li>
-                                    <li><a class="dropdown-item" href="/portfolio-item.html">Portfolio Item</a></li>
-                                </ul>
-                            </li> -->
-                        </ul>
-                    </div>
+    <body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <!-- Navbar Brand-->
+            <a class="navbar-brand ps-3" href="#">AGSK TECH </a>
+            <!-- Sidebar Toggle-->
+            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+            <!-- Navbar Search-->
+            <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+                <div class="input-group">
+                    <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
+                    <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
                 </div>
-            </nav>
-            <!-- Header-->
-            <header class="bg-dark banner py-5" >
-                <div class="container px-5 ">
-                    <div class="row gx-5 align-items-center justify-content-center">
-                        <div class="col-lg-8 col-xl-7 col-xxl-6">
-                            <div class="my-5 text-center text-xl-start">
-                                <figure class="text-center  py-5">
-                                    <blockquote class="blockquote">
-                                        <h1 class="fw-bolder fw-italic tagesschrift-regular" style="color: white;">Build your digital dream</h1>
-                                    </blockquote>
-                                    <figcaption class="blockquote-footer">
-                                        <h6>
-                                            <span class="tagesschrift-regular" style="color: white;">AGSK TECH</span> 
-                                            <span class="tagesschrift-regular" style="color: white;">|</span> 
-                                            <span class="tagesschrift-regular" style="color: white;">welcome  to AGSK TECH</span>
-                                        </h6>
-                                        <h3 class="tagesschrift-regular" style="color: white;">AGSK TECH Dashboards</h3>
-                                        <!-- Welcome to AGSK TECH, trusted partner for web development. We specialize in custom website design, responsive, and SEO. Our high-performance websites are built to traffic, engage users, and boost conversions. -->
-                                    </figcaption>
-                                </figure>
+            </form>
+            <!-- Navbar-->
+            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#!">Settings</a></li>
+                        <li><a class="dropdown-item" href="#!">Activity Log</a></li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li><a class="dropdown-item" href="#!">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <div class="p-3 ms-auto" id="beflogin">
+                                <h5>Login to Acess the Dashboard</h5>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </header>
-            <!-- login form -->
-            <section id="loginform" class="py-5">
-                <div class="container px-5">
-                    <div class="row gx-5 align-items-center justify-content-center">
-                        <div class="col-lg-8 col-xl-7 col-xxl-6">
-                            <div class="my-5 text-xl-start">
-                                <h2 class="fw-bolder">Login to your account</h2>
-                                <p class="lead fw-normal text-muted mb-5">Please enter your credentials to access your account.</p>
-                                <form id="loginForm" method="post">
-                                    <div class="mb-3">
-                                        <label for="employeeID" class="form-label">Employee ID</label>
-                                        <input type="text" class="form-control" id="employeeID" name="employeeID" placeholder="Enter your Employee ID" required>
+                            <div id="afterlogin">
+                                <a class="nav-link" href="#">
+                                    <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                    Dashboard
+                                </a>
+                                <div class="sb-sidenav-menu-heading">Interface</div>
+                                <a class="nav-link collapsed" href="#"  onclick="mettine()">
+                                    <div class="sb-nav-link-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-video2" viewBox="0 0 16 16">
+                                            <path d="M10 9.05a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"/>
+                                            <path d="M2 1a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2zM1 3a1 1 0 0 1 1-1h2v2H1zm4 10V2h9a1 1 0 0 1 1 1v9c0 .285-.12.543-.31.725C14.15 11.494 12.822 10 10 10c-3.037 0-4.345 1.73-4.798 3zm-4-2h3v2H2a1 1 0 0 1-1-1zm3-1H1V8h3zm0-3H1V5h3z"/>
+                                        </svg>
                                     </div>
-                                    <div class="mb-3">
-                                        <label for="password" class="form-label">Password</label>
-                                        <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" required>
+                                    metting
+                                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                </a>
+                                <a class="nav-link collapsed" href="#" onclick="tasking()">
+                                    <div class="sb-nav-link-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list-task" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd" d="M2 2.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5V3a.5.5 0 0 0-.5-.5zM3 3H2v1h1z"/>
+                                            <path d="M5 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5M5.5 7a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1zm0 4a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1z"/>
+                                            <path fill-rule="evenodd" d="M1.5 7a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5zM2 7h1v1H2zm0 3.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm1 .5H2v1h1z"/>
+                                        </svg>
                                     </div>
-                                    <button type="button" class="btn btn-primary" onclick="login()">Login</button>
-                                </form>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- dashboard contend -->
-            <section id="profile_info">
-                <div class="container text-center">
-                    <h2 class="fw-bolder">Dashboard</h2>
-                    <p class="lead fw-bolder mb-5">
-                        Welcome, <span id="nameto">name</span>, to your dashboard.
-                    </p>
-                    <div class="row g-2">
-                        <div class="col-6">
-                            <div class="p-3">
-                                <!-- metting join link -->
-                                <h4 class="fw-bolder" style="background-color: blueviolet;">Join to Meeting</h4>
-                                <!-- <form action="">
-                                    <div class="mb-3">
-                                        <label for="metemployee" class="form-label">Meeting Link</label>
-                                        <input type="text" class="form-control" id="metemployee" name="meetingLink" required>
+                                    task
+                                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                </a>
+                                <a class="nav-link" href="#" onclick="menter()">
+                                    <div class="sb-nav-link-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-video3" viewBox="0 0 16 16">
+                                            <path d="M14 9.5a2 2 0 1 1-4 0 2 2 0 0 1 4 0m-6 5.7c0 .8.8.8.8.8h6.4s.8 0 .8-.8-.8-3.2-4-3.2-4 2.4-4 3.2"/>
+                                            <path d="M2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h5.243c.122-.326.295-.668.526-1H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v7.81c.353.23.656.496.91.783Q16 12.312 16 12V4a2 2 0 0 0-2-2z"/>
+                                        </svg>
                                     </div>
-                                    <button type="button" class="btn btn-primary" onclick="joinMeeting()">Join Meeting</button>
-                                </form> -->
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="p-3">
-                                <!-- your task  -->
-                                <!-- <h4 class="fw-bolder" style="background-color: blueviolet;">Your Task</h4> -->
-                                <!-- <button class="btn btn-secondary">your task</button> -->
-                                <!-- <h4 id="taskentery">Your Task</h4> -->
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="p-3">
-                                <!-- your procus -->
-                                <h4 class="fw-bolder" style="background-color: blueviolet;">Your Procus</h4>
-                                <!-- <button class="btn btn-secondary">your procus</button> -->
-                                <!-- <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <div class="progress-bar progress-bar-striped progress-bar-animated" id="plavel" style="width: 50%"></div>
-                                </div> -->
-                                <!-- <h4 id="process">Your Procus</h4> -->
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="p-3">
-                                <!-- menter name -->
-                                <h4 class="fw-bolder" style="background-color: blueviolet;">menter name</h4>
-                                <!-- <button class="btn btn-secondary">menter name</button> -->
-                                <h4 id="mentername">Menter Name</h4>
+                                    menter
+                                </a>
+                                <a class="nav-link" href="#" onclick="proces()">
+                                    <div class="sb-nav-link-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-data" viewBox="0 0 16 16">
+                                            <path d="M4 11a1 1 0 1 1 2 0v1a1 1 0 1 1-2 0zm6-4a1 1 0 1 1 2 0v5a1 1 0 1 1-2 0zM7 9a1 1 0 0 1 2 0v3a1 1 0 1 1-2 0z"/>
+                                            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                                            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                                        </svg>
+                                    </div>
+                                    progress
+                                </a>
+                                <a class="nav-link" href="#" onclick="profile()">
+                                    <div class="sb-nav-link-icon"><i class="fas fa-user fa-fw"></i></div>
+                                    profile
+                                </a>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
-            <!-- dashboard new design -->
-            <section id="dashboard">
-                <div class="container px-5">
-                    <div class="row gx-5 align-items-center justify-content-center">
-                        <div class="col-lg-8 col-xl-7 col-xxl-6">
-                            <div class="my-5 text-xl-start">
-                                <h2 class="fw-bolder">Dashboard</h2>
-                                <p class="lead fw-normal text-muted mb-5">Welcome to your dashboard. Here you can manage your tasks, view your progress, and more.</p>
-                                <!-- Add your dashboard content here -->
-                            </div>
-                        </div>
+                    <div class="sb-sidenav-footer">
+                        <div class="small">Logged in as:</div>
+                        AGSK TECH
                     </div>
-                </div>
-                <div class="container">
-                    <div class="p-0">
-                        <div class="card w-75 m-auto">
-                            <h5 class="card-header">Featured</h5>
-                            <div class="card-body">
-                                <form action="">
-                                    <div class="mb-3">
-                                        <label for="metemployee" class="form-label">Meeting Link</label>
-                                        <input type="text" class="form-control" id="metemployee" name="meetingLink" required>
+                </nav>
+            </div>
+            <div id="layoutSidenav_content">
+                <main>
+                    <!-- <div class="container-fluid px-4">
+                        <h1 class="mt-4">Dashboard</h1>
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item active">Dashboard</li>
+                        </ol>
+                        <div class="row">
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-primary text-white mb-4">
+                                    <div class="card-body">Primary Card</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="#">View Details</a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
-                                    <button type="button" class="btn btn-primary" onclick="joinMeeting()">Join Meeting</button>
-                                </form>
-                                
-                                <!-- <h5 class="card-title">Special title treatment</h5>
-                                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                                </div>
                             </div>
-                        </div>
-
-                        <!-- From Uiverse.io by Admin12121 --> 
-                        <div class="row py-5">
-                            <div class="col-lg-12 col-md-12 col-sm-12">
-                                <div class="our_solution_category">
-                                    <div class="solution_cards_box">
-                                        <div class="solution_card">
-                                            <div class="hover_color_bubble"></div>
-                                            <div class="so_top_icon">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="40" viewBox="0 0 512 512" height="50" id="Layer_1">
-                                                    <g>
-                                                        <g>
-                                                            <g>
-                                                                <g>
-                                                                    <path fill="#fae19e" d="m47.478 452.317 295.441 19.76c5.511.369 10.277-3.8 10.645-9.31l28.393-424.517c.369-5.511-3.8-10.276-9.31-10.645l-295.441-19.76c-5.511-.369-10.276 3.8-10.645 9.31l-28.394 424.517c-.368 5.511 3.8 10.277 9.311 10.645z"></path>
-                                                                </g>
-                                                                <g>
-                                                                    <g>
-                                                                        <g>
-                                                                            <g>
-                                                                                <g>
-                                                                                    <path fill="#fff9e9" d="m17.5 504.177h226.14l79.96-79.605v-355.86c0-5.523-4.477-10-10-10h-296.1c-5.523 0-10 4.477-10 10v425.466c0 5.522 4.477 9.999 10 9.999z"></path>
-                                                                                </g>
-                                                                                <path fill="#fff4d6" d="m313.601 58.712h-40c5.523 0 10 4.477 10 10v355.861l-.258 40.078 40.258-40.078v-355.861c0-5.523-4.477-10-10-10z"></path>
-                                                                            </g>
-                                                                        </g>
-                                                                    </g>
-                                                                    <path fill="#ffeec2" d="m243.64 504.177v-70.253c0-5.523 4.477-10 10-10h69.96z"></path>
-                                                                </g>
-                                                            </g>
-                                                            <g>
-                                                                <path fill="#fed23a" d="m468.636 248.58-33.372.165v-50.826c0-9.183 7.463-16.662 16.673-16.708h.007c9.217-.046 16.693 7.371 16.693 16.562v50.807z"></path>
-                                                                <path fill="#54b1ff" d="m451.96 504.177c-10.362-10.277-16.196-24.263-16.208-38.857l-.062-73.973c0-.644.524-1.169 1.171-1.173l30.038-.149c.647-.003 1.171.517 1.171 1.161l.062 74.079c.012 14.531-5.749 28.472-16.015 38.756z"></path>
-                                                                <path fill="#fdf385" d="m451.959 469.333h-.01c-14.434.072-26.14-11.542-26.14-25.935v-213.527c0-6.778 5.477-12.283 12.255-12.316l27.626-.137c6.826-.034 12.378 5.49 12.378 12.316v213.436c0 14.38-11.687 26.091-26.109 26.163z"></path>
-                                                                <path fill="#faee6e" d="m465.69 217.417-23.769.118c6.037.79 10.708 5.94 10.708 12.198v213.437c0 9.823-5.455 18.397-13.507 22.87 3.79 2.115 8.164 3.317 12.826 3.293h.01c14.422-.072 26.109-11.783 26.109-26.163v-213.436c.001-6.826-5.551-12.351-12.377-12.317z"></path>
-                                                                <path fill="#54b1ff" d="m491.274 247.925-71.615.355c-7.305.036-13.226 5.968-13.226 13.248 0 7.281 5.921 13.153 13.226 13.117l58.389-.29v77.489c0 7.281 5.921 13.153 13.226 13.117 7.305-.036 13.226-5.968 13.226-13.248v-90.672c0-7.28-5.922-13.152-13.226-13.116z"></path>
-                                                                <g>
-                                                                    <path fill="#3da7ff" d="m491.274 247.925-38.441.188-.167 26.311 25.381-.067v77.489c0 7.281 5.921 13.153 13.226 13.117 7.305-.036 13.226-5.968 13.226-13.248v-90.672c.001-7.282-5.921-13.154-13.225-13.118z"></path>
-                                                                </g>
-                                                            </g>
-                                                        </g>
-                                                        <g fill="#060606">
-                                                            <path d="m373.147 20.122-295.44-19.761c-9.631-.638-17.984 6.665-18.629 16.293l-2.311 34.557h-39.267c-9.649 0-17.5 7.851-17.5 17.5v425.466c0 9.649 7.851 17.5 17.5 17.5h226.141c1.96 0 3.902-.801 5.292-2.185l34.138-33.987c.347.074.701.133 1.065.157l58.282 3.898c9.302.614 18.005-6.952 18.629-16.293l28.393-424.515c.639-9.528-6.766-17.993-16.293-18.63zm-122.006 465.902v-52.1c0-1.378 1.122-2.5 2.5-2.5h51.9zm94.939-23.757c-.244 1.51-1.131 2.286-2.66 2.327l-46.28-3.096 31.752-31.611c1.414-1.407 2.209-3.32 2.209-5.315v-355.86c0-9.649-7.851-17.5-17.5-17.5h-77.993c-9.697 0-9.697 15 0 15h77.993c1.379 0 2.5 1.122 2.5 2.5v347.712h-62.46c-9.649 0-17.5 7.851-17.5 17.5v62.753h-218.641c-1.378 0-2.5-1.122-2.5-2.5v-425.465c0-1.378 1.122-2.5 2.5-2.5h178.168c9.697 0 9.697-15 0-15h-123.868l2.244-33.556c.244-1.511 1.131-2.286 2.661-2.327l295.44 19.76c1.511.244 2.287 1.131 2.328 2.661z"></path>
-                                                            <path d="m267.827 237.047h-204.553c-4.142 0-7.5 3.358-7.5 7.5s3.358 7.5 7.5 7.5h204.553c4.143 0 7.5-3.358 7.5-7.5s-3.357-7.5-7.5-7.5z"></path>
-                                                            <path d="m267.827 289.332h-204.553c-4.142 0-7.5 3.358-7.5 7.5s3.358 7.5 7.5 7.5h204.553c4.143 0 7.5-3.358 7.5-7.5s-3.357-7.5-7.5-7.5z"></path>
-                                                            <path d="m55.774 192.262c0 4.142 3.358 7.5 7.5 7.5h204.553c4.143 0 7.5-3.358 7.5-7.5s-3.357-7.5-7.5-7.5h-204.553c-4.142 0-7.5 3.358-7.5 7.5z"></path>
-                                                            <path d="m91.807 139.977c0 4.142 3.358 7.5 7.5 7.5h132.487c4.142 0 7.5-3.358 7.5-7.5s-3.358-7.5-7.5-7.5h-132.487c-4.142 0-7.5 3.358-7.5 7.5z"></path>
-                                                            <path d="m194.755 438.787c-13.489.036-26.978.065-40.467.086-4.534.007-9.067.013-13.6.016-8.215.006-13.75-1.643-15.59-10.679-1.556-7.64-12.364-6.613-14.464 0-5.19 16.337-13.774 9.936-18.582-1.053-4.797-10.963-6.027-23.233-8.122-34.9-1.54-8.573-14.506-6.17-14.732 1.994-.298 10.751-1.302 21.331-4.031 31.758-2.815 10.758-7.034 21.097-11.222 31.376-3.651 8.961 10.867 12.816 14.464 3.988 3.711-9.108 7.427-18.266 10.193-27.714 5.14 12.36 15.774 26.34 30.927 18.101 2.819-1.533 5.452-3.712 7.763-6.253 7.88 9.106 19.609 8.388 30.584 8.375 15.627-.02 31.254-.054 46.881-.095 9.649-.025 9.667-15.025-.002-15z"></path>
-                                                            <path d="m505.932 246.439c-3.897-3.878-9.255-5.867-14.695-6.014l-5.668.028v-10.719c0-6.529-3.878-13.427-9.433-16.862v-15.098c0-31.069-48.372-30.934-48.372.146v15.1c-5.659 3.498-9.455 9.741-9.455 16.852v10.982c-24.966 1.7-25.037 39.745.028 41.232.16 33.575.152 66.6-.028 100.737-.049 9.414 14.949 9.966 15 .079.18-34.166.188-67.22.029-100.823l37.211-.185s-.048 110.848-.048 160.784c0 24.338-37.219 24.5-37.219-.253l.013-13.677c.585-9.68-14.387-10.583-14.973-.904v12.834c0 11 3.402 20.316 9.988 26.869.586 15.693 7.198 30.878 18.369 41.956 3.205 3.18 7.642 2.208 10.744-.182 11.365-11.385 17.769-26.394 18.169-42.414 4.951-4.931 9.908-9.896 9.908-26.896l.006-68.351c12.97 3.689 26.494-6.348 26.494-19.946v-90.672c0-5.523-2.155-10.709-6.068-14.603zm-72.623-5.727v-10.841c0-2.219 1.523-4.08 3.573-4.633l30.025-.149c.84.208 1.615.605 2.243 1.231.915.911 1.419 2.123 1.419 3.414v10.794zm18.671-52c4.604 0 9.155 4.514 9.155 9.062v12.166l-18.372.091v-12.111c.001-5.053 4.133-9.183 9.217-9.208zm-.011 303.901c-3.487-4.942-6.009-10.531-7.417-16.406 2.322.503 4.674.765 7.027.765 2.627 0 5.253-.326 7.839-.957-1.374 5.964-3.892 11.587-7.449 16.598zm45.031-140.899c0 7.101-11.452 7.66-11.452.131 0 0 .013-70.974.021-77.48.005-4.196-3.483-7.509-7.558-7.509l-58.389.29c-7.242 0-7.073-11.331.074-11.366l71.615-.355c3.463.295 5.359 2.168 5.688 5.617v90.672z"></path>
-                                                        </g>
-                                                    </g>
-                                                </svg>
-                                            </div>
-                                            <div class="solu_title">
-                                                <div>Today Task</div>
-                                            </div>
-                                            <div class="solu_description">
-                                                <p id="taskentery">
-                                                    nill
-                                                </p>
-                                                <!-- <button class="read_more_btn" type="button">Read More</button> -->
-                                            </div>
-                                        </div>
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-warning text-white mb-4">
+                                    <div class="card-body">Warning Card</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="#">View Details</a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-success text-white mb-4">
+                                    <div class="card-body">Success Card</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="#">View Details</a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-danger text-white mb-4">
+                                    <div class="card-body">Danger Card</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="#">View Details</a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- End of From Uiverse.io by Admin12121 -->
-                    <!-- From Uiverse.io by MohamedSSuhail --> 
-                    <div class="porcescard m-auto my-4">
-                        <div class="card__title">Web Design templates Selection</div>
-                            <div class="card__subtitle">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elitsed do eiusmod.
+                        <div class="row">
+                            <div class="col-xl-6">
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <i class="fas fa-chart-area me-1"></i>
+                                        Area Chart Example
+                                    </div>
+                                    <div class="card-body"><canvas id="myAreaChart" width="100%" height="40"></canvas></div>
+                                </div>
                             </div>
-                            <div class="card__indicator">
-                                <span class="card__indicator-amount">100</span> Works /
-                                <span class="card__indicator-percentage" id="plavel"></span>
+                            <div class="col-xl-6">
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <i class="fas fa-chart-bar me-1"></i>
+                                        Bar Chart Example
+                                    </div>
+                                    <div class="card-body"><canvas id="myBarChart" width="100%" height="40"></canvas></div>
+                                </div>
                             </div>
-                            <div class="card__progress">
-                                <progress max="100" id="pavlavel" value="100"></progress>
+                        </div>
+                    </div> -->
+                    <!-- login secting  -->
+                    <section >
+                        <div class="container-fluid px-4">
+                        <h1 class="mt-4">Dashboard</h1>
+                        <div id="login">
+                            <div>
+                                <h5>Login</h5>
+                            </div>
+                            <form>
+                            <!-- employee id -->
+                            <div class="mb-3">
+                                <label for="employeeid" class="form-label">Employee ID</label>
+                                <input type="text" class="form-control" id="employeeID" required>
+                            </div>
+                            <!-- possword -->
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="password">
+                            </div>
+                            <button type="button" onclick="login()" class="btn btn-primary">Submit</button>
+                        </form>
+                        </div>
+                        
+                    </section>
+                    <!-- metting -->
+                    <section id="metting">
+                        <div class="container">
+                            <div>
+                                <figure class="text-center">
+                                    <blockquote class="blockquote">
+                                        <p>Metting</p>
+                                    </blockquote>
+                                    <figcaption class="blockquote-footer">
+                                        Metting <cite title="Source Title">AGSK TECH</cite>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="w-75 m-auto p-3">
+                                <div class="">
+                                    <form action="" method="post">
+                                        <div class="mb-3">
+                                            <label for="employeeid" class="form-label">Employee ID</label>
+                                            <input type="text" class="form-control" id="memployeeID" required>
+                                        </div>
+                                        <button type="button" class="btn btn-primary" onclick="joinMeeting()">Join Metting</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- task -->
+                    <section id="task">
+                        <div class="container">
+                            <div>
+                                <figure class="text-center">
+                                    <blockquote class="blockquote">
+                                        <p>Tuday Task</p>
+                                    </blockquote>
+                                    <figcaption class="blockquote-footer">
+                                        task <cite title="Source Title">AGSK TECH</cite>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="w-100 m-auto p-3">
+                                <div class="">
+                                    <h6 id="tudaytask">Nill</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- menter profile -->
+                    <section id="menter">
+                        <div class="container">
+                            <div>
+                                <figure class="text-center">
+                                    <blockquote class="blockquote">
+                                        <p>Menter Profile</p>
+                                    </blockquote>
+                                    <figcaption class="blockquote-footer">
+                                        Menter <cite title="Source Title">AGSK TECH</cite>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="w-75 m-auto p-3">
+                                <div class="">
+                                    <table class="table">
+                                        <thead>
+                                           
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">#</th>
+                                                <td>name</td>
+                                                <td id="mname">ashok bharathi</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">#</th>
+                                                <td>Phone Number</td>
+                                                <td>8073121367</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">#</th>
+                                                <td>Depatmant</td>
+                                                <td>devloper</td>
+                                            </tr>
+                                            
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- progress -->
+                    <section id="progress">
+                        <div class="container">
+                            <div>
+                                <figure class="text-center">
+                                    <blockquote class="blockquote">
+                                        <p>progress</p>
+                                    </blockquote>
+                                    <figcaption class="blockquote-footer">
+                                        progress <cite title="Source Title">AGSK TECH</cite>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="w-100 m-auto p-3">
+                                <!-- From Uiverse.io by Enozito --> 
+                                <div class="card ">
+                                    <div class="card__wrapper">
+                                        <div class="card_icon">
+                                        <svg
+                                            height="24"
+                                            width="24"
+                                            viewBox="0 0 512 512"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                            d="M352 256c0 22.2-1.2 43.6-3.3 64l-185.3 0c-2.2-20.4-3.3-41.8-3.3-64s1.2-43.6 3.3-64l185.3 0c2.2 20.4 3.3 41.8 3.3 64zm28.8-64l123.1 0c5.3 20.5 8.1 41.9 8.1 64s-2.8 43.5-8.1 64l-123.1 0c2.1-20.6 3.2-42 3.2-64s-1.1-43.4-3.2-64zm112.6-32l-116.7 0c-10-63.9-29.8-117.4-55.3-151.6c78.3 20.7 142 77.5 171.9 151.6zm-149.1 0l-176.6 0c6.1-36.4 15.5-68.6 27-94.7c10.5-23.6 22.2-40.7 33.5-51.5C239.4 3.2 248.7 0 256 0s16.6 3.2 27.8 13.8c11.3 10.8 23 27.9 33.5 51.5c11.6 26 20.9 58.2 27 94.7zm-209 0L18.6 160C48.6 85.9 112.2 29.1 190.6 8.4C165.1 42.6 145.3 96.1 135.3 160zM8.1 192l123.1 0c-2.1 20.6-3.2 42-3.2 64s1.1 43.4 3.2 64L8.1 320C2.8 299.5 0 278.1 0 256s2.8-43.5 8.1-64zM194.7 446.6c-11.6-26-20.9-58.2-27-94.6l176.6 0c-6.1 36.4-15.5 68.6-27 94.6c-10.5 23.6-22.2 40.7-33.5 51.5C272.6 508.8 263.3 512 256 512s-16.6-3.2-27.8-13.8c-11.3-10.8-23-27.9-33.5-51.5zM135.3 352c10 63.9 29.8 117.4 55.3 151.6C112.2 482.9 48.6 426.1 18.6 352l116.7 0zm358.1 0c-30 74.1-93.6 130.9-171.9 151.6c25.5-34.2 45.2-87.7 55.3-151.6l116.7 0z"
+                                            ></path>
+                                        </svg>
+                                        </div>
+                                        <div class="card__menu">
+                                        <svg
+                                            fill="none"
+                                            height="20"
+                                            viewBox="0 0 4 20"
+                                            width="4"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g fill="#000">
+                                            <path
+                                                d="m2 4c1.10457 0 2-.89543 2-2s-.89543-2-2-2-2 .89543-2 2 .89543 2 2 2z"
+                                            ></path>
+                                            <path
+                                                d="m2 12c1.10457 0 2-.8954 2-2 0-1.10457-.89543-2-2-2s-2 .89543-2 2c0 1.1046.89543 2 2 2z"
+                                            ></path>
+                                            <path
+                                                d="m2 20c1.10457 0 2-.8954 2-2s-.89543-2-2-2-2 .8954-2 2 .89543 2 2 2z"
+                                            ></path>
+                                            </g>
+                                        </svg>
+                                        </div>
+                                    </div>
+                                    <div class="card__title">Web Design Templates Selection</div>
+                                    <div class="card__subtitle">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elitsed do eiusmod.
+                                    </div>
+                                    <div class="card__indicator">
+                                        <span class="card__indicator-amount">100</span> Works /
+                                        <span class="card__indicator-percentage" id="process"></span>
+                                    </div>
+                                    <div class="card__progress"><progress value="" id="processbar" max="100"></progress></div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- profile -->
+                    <section id="profile">
+                        <div class="container" >
+                            <div>
+                                <figure class="text-center">
+                                    <blockquote class="blockquote">
+                                        <p>profile</p>
+                                    </blockquote>
+                                    <figcaption class="blockquote-footer">
+                                        profile <cite title="Source Title">AGSK TECH</cite>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <!-- From Uiverse.io by bociKond --> 
+                            <div class="procard m-auto">
+                                <svg xml:space="preserve" style="enable-background: new 0 0 16 16" viewBox="0 0 16 16" y="0px" x="0px" id="Layer_1_1_" version="1.1" class="img">
+                                    <path d="M12,9H8H4c-2.209,0-4,1.791-4,4v3h16v-3C16,10.791,14.209,9,12,9z"></path>
+                                    <path d="M12,5V4c0-2.209-1.791-4-4-4S4,1.791,4,4v1c0,2.209,1.791,4,4,4S12,7.209,12,5z"></path>
+                                </svg>
+
+                                <div class="text">
+                                    <span class="heading " id="cadname">name</span>
+                                    <p class="info">INTERNSHIP</p>
+                                    <span class="heading " id="cadphone">0000000000</span>
+                                    <span class="heading text-uppercase" id="cadusername">username</span>
+                                    <span class="heading " id="cademail">email</span>
+                                    <span class="heading text-uppercase" id="dep">ECE</span>
+                                    <!-- <div class="country">
+                                        <svg stroke-linejoin="round" stroke-linecap="round" stroke-width="2" stroke="#f2e5d7" fill="none" viewBox="0 0 24 24" class="svg-country">
+                                            <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path>
+                                            <line y2="15" x2="4" y1="22" x1="4"></line>
+                                        </svg>
+                                        <span>Italy</span>
+                                    </div> -->
+                                </div>
+                                <ul class="soc">
+                                    <a href="#" class="li-soc">
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 48 48" height="32" width="32">
+                                            <path fill="#f2e5d7" d="M24 0C10.7452 0 0 10.7452 0 24C0 37.2548 10.7452 48 24 48C37.2548 48 48 37.2548 48 24C48 10.7452 37.2548 0 24 0ZM26.5016 25.0542V38.1115H21.0991V25.0547H18.4V20.5551H21.0991V17.8536C21.0991 14.1828 22.6231 12 26.9532 12H30.5581V16.5001H28.3048C26.6192 16.5001 26.5077 17.1289 26.5077 18.3025L26.5016 20.5546H30.5836L30.1059 25.0542H26.5016Z" clip-rule="evenodd" fill-rule="evenodd"></path>
+                                            </svg>
+                                        </li>
+                                    </a>
+                                    <a href="#" class="li-soc">
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 48 48" height="32" width="32">
+                                            <path fill="#f2e5d7" d="M24 0C10.7452 0 0 10.7452 0 24C0 37.2548 10.7452 48 24 48C37.2548 48 48 37.2548 48 24C48 10.7452 37.2548 0 24 0ZM23.3316 20.338L23.2812 19.5075C23.1301 17.3551 24.4563 15.3891 26.5548 14.6265C27.327 14.3553 28.6364 14.3214 29.4926 14.5587C29.8283 14.6604 30.4663 14.9993 30.9195 15.3044L31.7421 15.8637L32.6486 15.5756C33.1523 15.423 33.8238 15.1688 34.1259 14.9993C34.4113 14.8468 34.6631 14.762 34.6631 14.8129C34.6631 15.101 34.042 16.084 33.5216 16.6263C32.8165 17.389 33.018 17.4568 34.4449 16.9483C35.3011 16.6602 35.3178 16.6602 35.15 16.9822C35.0492 17.1517 34.5288 17.7449 33.9748 18.2872C33.0347 19.2194 32.9844 19.3211 32.9844 20.1007C32.9844 21.304 32.4136 23.8123 31.8428 25.1851C30.7852 27.7612 28.5189 30.422 26.2526 31.7609C23.063 33.6422 18.8157 34.1167 15.24 33.0151C14.0481 32.6422 12 31.6931 12 31.5237C12 31.4728 12.6211 31.405 13.3766 31.3881C14.9546 31.3542 16.5326 30.9135 17.8756 30.1339L18.7822 29.5916L17.7413 29.2357C16.264 28.7272 14.9378 27.5578 14.6021 26.4562C14.5013 26.1003 14.5349 26.0833 15.475 26.0833L16.4487 26.0664L15.6261 25.6766C14.6524 25.1851 13.7627 24.3546 13.3262 23.5072C13.0072 22.8971 12.6044 21.3548 12.7219 21.2362C12.7554 21.1854 13.108 21.287 13.5109 21.4226C14.6692 21.8463 14.8203 21.7446 14.1488 21.0328C12.8897 19.7448 12.5036 17.8296 13.108 16.0162L13.3934 15.2027L14.5013 16.3043C16.7677 18.5245 19.4369 19.8465 22.4922 20.2363L23.3316 20.338Z" clip-rule="evenodd" fill-rule="evenodd"></path>
+                                            </svg>
+                                        </li>
+                                    </a>
+                                    <a href="#" class="li-soc">
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 48 48" height="32" width="32">
+                                            <path fill="#f2e5d7" d="M24 0C10.7452 0 0 10.7452 0 24C0 37.2548 10.7452 48 24 48C37.2548 48 48 37.2548 48 24C48 10.7452 37.2548 0 24 0ZM18.7233 11.2773C20.0886 11.2152 20.5249 11.2 24.0012 11.2H23.9972C27.4746 11.2 27.9092 11.2152 29.2746 11.2773C30.6373 11.3397 31.5679 11.5555 32.384 11.872C33.2266 12.1987 33.9386 12.636 34.6506 13.348C35.3627 14.0595 35.8 14.7736 36.128 15.6155C36.4427 16.4294 36.6587 17.3595 36.7227 18.7222C36.784 20.0876 36.8 20.5238 36.8 24.0001C36.8 27.4764 36.784 27.9116 36.7227 29.277C36.6587 30.6391 36.4427 31.5695 36.128 32.3837C35.8 33.2253 35.3627 33.9394 34.6506 34.6509C33.9394 35.3629 33.2264 35.8013 32.3848 36.1283C31.5703 36.4448 30.6391 36.6605 29.2765 36.7229C27.9111 36.7851 27.4762 36.8003 23.9996 36.8003C20.5236 36.8003 20.0876 36.7851 18.7222 36.7229C17.3598 36.6605 16.4294 36.4448 15.615 36.1283C14.7736 35.8013 14.0595 35.3629 13.3483 34.6509C12.6365 33.9394 12.1992 33.2253 11.872 32.3834C11.5557 31.5695 11.34 30.6394 11.2773 29.2767C11.2155 27.9114 11.2 27.4764 11.2 24.0001C11.2 20.5238 11.216 20.0873 11.2771 18.7219C11.3384 17.3598 11.5544 16.4294 11.8717 15.6152C12.1997 14.7736 12.6371 14.0595 13.3491 13.348C14.0606 12.6363 14.7747 12.1989 15.6166 11.872C16.4305 11.5555 17.3606 11.3397 18.7233 11.2773Z" clip-rule="evenodd" fill-rule="evenodd"></path>
+                                            <path fill="#f2e5d7" d="M22.853 13.5067C23.0759 13.5064 23.3158 13.5065 23.5746 13.5066L24.0013 13.5067C27.4189 13.5067 27.824 13.519 29.1736 13.5803C30.4216 13.6374 31.0989 13.8459 31.5501 14.0211C32.1475 14.2531 32.5733 14.5305 33.0211 14.9785C33.4691 15.4265 33.7464 15.8532 33.979 16.4505C34.1542 16.9012 34.363 17.5785 34.4198 18.8265C34.4811 20.1759 34.4944 20.5812 34.4944 23.9972C34.4944 27.4133 34.4811 27.8186 34.4198 29.168C34.3627 30.416 34.1542 31.0933 33.979 31.544C33.747 32.1413 33.4691 32.5667 33.0211 33.0144C32.5731 33.4624 32.1477 33.7398 31.5501 33.9718C31.0995 34.1478 30.4216 34.3558 29.1736 34.4128C27.8242 34.4742 27.4189 34.4875 24.0013 34.4875C20.5834 34.4875 20.1783 34.4742 18.8289 34.4128C17.5809 34.3552 16.9036 34.1467 16.4521 33.9715C15.8548 33.7395 15.4281 33.4621 14.9801 33.0141C14.5321 32.5661 14.2548 32.1405 14.0222 31.5429C13.847 31.0923 13.6382 30.4149 13.5814 29.1669C13.5201 27.8176 13.5078 27.4122 13.5078 23.994C13.5078 20.5759 13.5201 20.1727 13.5814 18.8233C13.6385 17.5753 13.847 16.898 14.0222 16.4468C14.2542 15.8494 14.5321 15.4228 14.9801 14.9748C15.4281 14.5268 15.8548 14.2494 16.4521 14.0169C16.9033 13.8409 17.5809 13.6329 18.8289 13.5755C20.0097 13.5222 20.4674 13.5062 22.853 13.5035V13.5067ZM30.8339 15.6321C29.9859 15.6321 29.2978 16.3193 29.2978 17.1676C29.2978 18.0156 29.9859 18.7036 30.8339 18.7036C31.6819 18.7036 32.3699 18.0156 32.3699 17.1676C32.3699 16.3196 31.6819 15.6316 30.8339 15.6316V15.6321ZM17.4279 24.0002C17.4279 20.3701 20.3709 17.4269 24.001 17.4268C27.6312 17.4268 30.5736 20.37 30.5736 24.0002C30.5736 27.6304 27.6314 30.5723 24.0013 30.5723C20.3711 30.5723 17.4279 27.6304 17.4279 24.0002Z" clip-rule="evenodd" fill-rule="evenodd"></path>
+                                            <path fill="#f2e5d7" d="M24.0012 19.7334C26.3575 19.7334 28.2679 21.6436 28.2679 24.0001C28.2679 26.3564 26.3575 28.2668 24.0012 28.2668C21.6447 28.2668 19.7345 26.3564 19.7345 24.0001C19.7345 21.6436 21.6447 19.7334 24.0012 19.7334Z"></path>
+                                            </svg>
+                                        </li>
+                                    </a>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                </main>
+                <footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid px-4">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">Copyright &copy; Your Website 2023</div>
+                            <div>
+                                <a href="#">Privacy Policy</a>
+                                &middot;
+                                <a href="#">Terms &amp; Conditions</a>
                             </div>
                         </div>
                     </div>
-                    <!-- end score -->
-
-                </div>
-            </section>
-        </main>
-        <!-- Footer-->
-        <footer class="bg-dark py-4 mt-auto">
-            <div class="container px-5">
-                <div class="row align-items-center justify-content-between flex-column flex-sm-row">
-                    <div class="col-auto"><div class="small m-0 text-white">Copyright &copy; All Rights Reserved at AGSK Tech</div></div>
-                    <div class="col-auto">
-                        <a class="link-light small" href="#!">Privacy</a>
-                        <span class="text-white mx-1">&middot;</span>
-                        <a class="link-light small" href="#!">Terms</a>
-                        <span class="text-white mx-1">&middot;</span>
-                        <a class="link-light small" href="#!">Contact</a>
-                    </div>
-                </div>
+                </footer>
             </div>
-        </footer>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="/client/js/scripts.js"></script>
-        <script src="/js/dashboard.js"></script>
-        <!-- aleart box -->
+        </div>
         <script src="https://cdn.jsdelivr.net/gh/noumanqamar450/alertbox@main/version/1.0.2/alertbox.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/dashboard.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        <script src="assets/demo/chart-area-demo.js"></script>
+        <script src="assets/demo/chart-bar-demo.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
+        <script src="js/datatables-simple-demo.js"></script>
     </body>
 </html>

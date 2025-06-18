@@ -1,5 +1,83 @@
-// hide a all section
-// document.getElementById("profile_info").style.display = "none";
+window.addEventListener('DOMContentLoaded', event => {
+
+    // Toggle the side navigation
+    const sidebarToggle = document.body.querySelector('#sidebarToggle');
+    if (sidebarToggle) {
+        // Uncomment Below to persist sidebar toggle between refreshes
+        // if (localStorage.getItem('sb|sidebar-toggle') === 'true') {
+        //     document.body.classList.toggle('sb-sidenav-toggled');
+        // }
+        sidebarToggle.addEventListener('click', event => {
+            event.preventDefault();
+            document.body.classList.toggle('sb-sidenav-toggled');
+            localStorage.setItem('sb|sidebar-toggle', document.body.classList.contains('sb-sidenav-toggled'));
+        });
+    }
+
+});
+// hide all element
+document.getElementById("metting").style.display="none";
+document.getElementById("task").style.display="none";
+document.getElementById("menter").style.display="none";
+document.getElementById("progress").style.display="none";
+document.getElementById("profile").style.display="none";
+document.getElementById("afterlogin").style.display="none";
+
+// metting
+function mettine(){
+    document.getElementById("metting").style.display="block";
+    document.getElementById("task").style.display="none";
+    document.getElementById("menter").style.display="none";
+    document.getElementById("progress").style.display="none";
+    document.getElementById("profile").style.display="none";
+    document.getElementById("beflogin").style.display="none";
+    document.getElementById("login").style.display= "none"
+}
+// task
+function tasking(){
+    document.getElementById("task").style.display="block";
+    document.getElementById("metting").style.display="none";
+    document.getElementById("menter").style.display="none";
+    document.getElementById("progress").style.display="none";
+    document.getElementById("profile").style.display="none";
+    document.getElementById("beflogin").style.display="none";
+    document.getElementById("login").style.display= "none"
+}
+// menter
+function menter(){
+    document.getElementById("menter").style.display="block";
+    document.getElementById("metting").style.display="none";
+    document.getElementById("task").style.display="none";
+    
+    document.getElementById("progress").style.display="none";
+    document.getElementById("profile").style.display="none";
+    document.getElementById("beflogin").style.display="none";
+    document.getElementById("login").style.display= "none"
+}
+// proces
+function proces(){
+    document.getElementById("progress").style.display="block";
+    document.getElementById("metting").style.display="none";
+    document.getElementById("task").style.display="none";
+    document.getElementById("menter").style.display="none";
+    
+    document.getElementById("profile").style.display="none";
+    document.getElementById("beflogin").style.display="none";
+    document.getElementById("login").style.display= "none"
+}
+// profile
+function profile(){
+    document.getElementById("profile").style.display="block";
+    document.getElementById("metting").style.display="none";
+    document.getElementById("task").style.display="none";
+    document.getElementById("menter").style.display="none";
+    document.getElementById("progress").style.display="none";
+    
+    document.getElementById("beflogin").style.display="none";
+    document.getElementById("login").style.display= "none"
+}
+
+
 
 // login function
 function login() {
@@ -23,7 +101,7 @@ function login() {
     .then(data => {
         // console.log(data);
         var name = (data.data.data[0].name);
-        var username = (data.data.data[0].username);
+        var username = (data.data.data[0].usernane);
         var password = (data.data.data[0].password);
         var intid = (data.data.data[0].internship_ID);
         var status = (data.data.data[0].Login_status);
@@ -44,31 +122,8 @@ function login() {
                     btnTitle: 'Ok',
                     border:true
                 })
-                // show contend
-                document.getElementById("loginform").style.display = "none";
-                document.getElementById("profile_info").style.display = "block";
-                // get the profile info
-                // from json data
-                document.getElementById("metemployee").value = intid;
-                // get name
-                document.getElementById("nameto").innerHTML = name;
-                // task
-                var tourtask = (data.data.data[0].task);
-                document.getElementById("taskentery").innerHTML = tourtask;
-                // menter name
-                var mentername = (data.data.data[0].mentor_name);
-                document.getElementById("mentername").innerHTML = mentername;
-                // procusenter
-                var procusenter = (data.data.data[0].Progress);
-                // console.log("Progress: " + procusenter);
-                // document.getElementById("process").innerHTML = procusenter;
-                // change the progress bar width
-                document.getElementById("plavel").innerHTML = procusenter + "%";
-                document.getElementById("pavlavel").value = procusenter;
-
-                // get fee fron json data
+                // fess ching
                 var fee = (data.data.data[0].fee_starters );
-
                 if( fee == "pending" ){
                     alertbox.render({
                         alertIcon: 'warning',
@@ -78,6 +133,32 @@ function login() {
                         border:true
                     });
                 }
+                // display menunbar
+                document.getElementById("afterlogin").style.display="block";
+                document.getElementById("beflogin").style.display="none";
+                // enter the matting id in input
+                document.getElementById("memployeeID").value=intid;
+                // get task
+                var ttask = (data.data.data[0].task)
+                document.getElementById("tudaytask").innerHTML = ttask; // show the task
+                // monter
+                var mentor = (data.data.data[0].mentor_name)
+                document.getElementById("mname").innerHTML="Mr."+mentor; // print rendor
+                // process
+                var proc = (data.data.data[0].Progress)
+                document.getElementById("process").innerHTML= proc +"%"; // value in number
+                document.getElementById("processbar").value = proc; //value for bar
+                // profile
+                var name = (data.data.data[0].name)
+                var pnum = (data.data.data[0].phone_number)
+                var dep = (data.data.data[0].department)
+                var email = (data.data.data[0].E_mail)
+
+                document.getElementById("cadname").innerHTML = "Mr. "+name;
+                document.getElementById("cadphone").innerHTML=pnum;
+                document.getElementById("cadusername").innerHTML=username;
+                document.getElementById("cademail").innerHTML=email;
+                document.getElementById("dep").innerHTML=dep
                
             }
             else {
@@ -156,7 +237,7 @@ function sendmsgloginms() {
 
 // metting join function
 function joinMeeting() {
-    var employee = document.getElementById("metemployee").value;
+    var employee = document.getElementById("memployeeID").value;
 
     // check if the employee id is empty
     if (employee.trim() === "") {
