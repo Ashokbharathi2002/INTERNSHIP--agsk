@@ -32,7 +32,7 @@ function dashboard(){
     document.getElementById("menter").style.display="none";
     document.getElementById("progress").style.display="none";
     document.getElementById("profile").style.display="none";
-    document.getElementById("afterlogin").style.display="none";
+    
     
 } 
 
@@ -44,7 +44,8 @@ function mettine(){
     document.getElementById("progress").style.display="none";
     document.getElementById("profile").style.display="none";
     document.getElementById("beflogin").style.display="none";
-    document.getElementById("login").style.display= "none"
+    document.getElementById("login").style.display= "none";
+    document.getElementById("dashbosrd").style.display="none";
 }
 // task
 function tasking(){
@@ -54,7 +55,8 @@ function tasking(){
     document.getElementById("progress").style.display="none";
     document.getElementById("profile").style.display="none";
     document.getElementById("beflogin").style.display="none";
-    document.getElementById("login").style.display= "none"
+    document.getElementById("login").style.display= "none";
+    document.getElementById("dashbosrd").style.display="none";
 }
 // menter
 function menter(){
@@ -65,7 +67,8 @@ function menter(){
     document.getElementById("progress").style.display="none";
     document.getElementById("profile").style.display="none";
     document.getElementById("beflogin").style.display="none";
-    document.getElementById("login").style.display= "none"
+    document.getElementById("login").style.display= "none";
+    document.getElementById("dashbosrd").style.display="none";
 }
 // proces
 function proces(){
@@ -76,7 +79,8 @@ function proces(){
     
     document.getElementById("profile").style.display="none";
     document.getElementById("beflogin").style.display="none";
-    document.getElementById("login").style.display= "none"
+    document.getElementById("login").style.display= "none";
+    document.getElementById("dashbosrd").style.display="none";
 }
 // profile
 function profile(){
@@ -87,7 +91,8 @@ function profile(){
     document.getElementById("progress").style.display="none";
     
     document.getElementById("beflogin").style.display="none";
-    document.getElementById("login").style.display= "none"
+    document.getElementById("login").style.display= "none";
+    document.getElementById("dashbosrd").style.display="none";
 }
 
 // login function
@@ -151,7 +156,7 @@ function login() {
                 document.getElementById("beflogin").style.display="none";
                 document.getElementById("login").style.display="none";
                 // dashboard contend
-                dashboard()
+                document.getElementById("dashbosrd").style.display="block"
                 // enter the matting id in input
                 document.getElementById("memployeeID").value=intid;
                 // get task
