@@ -22,6 +22,19 @@ document.getElementById("menter").style.display="none";
 document.getElementById("progress").style.display="none";
 document.getElementById("profile").style.display="none";
 document.getElementById("afterlogin").style.display="none";
+document.getElementById("dashbosrd").style.display="none";
+
+// dashboard
+function dashboard(){
+    document.getElementById("dashbosrd").style.display="block";
+    document.getElementById("metting").style.display="none";
+    document.getElementById("task").style.display="none";
+    document.getElementById("menter").style.display="none";
+    document.getElementById("progress").style.display="none";
+    document.getElementById("profile").style.display="none";
+    document.getElementById("afterlogin").style.display="none";
+    
+} 
 
 // metting
 function mettine(){
@@ -77,13 +90,13 @@ function profile(){
     document.getElementById("login").style.display= "none"
 }
 
-
-
 // login function
 function login() {
     // get the username and password
     var username = document.getElementById("employeeID").value;
     var cadpassword = document.getElementById("password").value;
+
+    document.getElementById("logbtn").style.display="none";
 
     // get user data
     var apiUrl = 'https://script.google.com/macros/s/AKfycbyFI1ZO615dm7R4AAsd627Tf02YHdS8jLIXqwFFhSv29Dxg-8f3-a_ATM-N6AvUaNV1/exec';
@@ -136,6 +149,9 @@ function login() {
                 // display menunbar
                 document.getElementById("afterlogin").style.display="block";
                 document.getElementById("beflogin").style.display="none";
+                document.getElementById("login").style.display="none";
+                // dashboard contend
+                dashboard()
                 // enter the matting id in input
                 document.getElementById("memployeeID").value=intid;
                 // get task
@@ -163,6 +179,7 @@ function login() {
             }
             else {
                 // alert("Login failed");
+                document.getElementById("logbtn").style.display="block";
                 alertbox.render({
                     alertIcon: 'error',
                     title: 'Error!',
@@ -173,7 +190,7 @@ function login() {
             }
         } 
         else {
-            
+            document.getElementById("logbtn").style.display="block";
             alertbox.render({
                 alertIcon: 'error',
                 title: 'Error!',
@@ -186,6 +203,7 @@ function login() {
     })
     .catch(error => {
         console.error('Error:', error);
+        document.getElementById("logbtn").style.display="block";
         alertbox.render({
             alertIcon: 'error',
             title: 'Error!',
