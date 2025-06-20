@@ -122,7 +122,7 @@
                                             <option value="MECH">MECH</option>
                                             <option value="CIVIL">CIVIL</option>
                                             <option value="IT">IT</option>
-                                            <option value="IT">AI&DS</option>
+                                            <option value="ai&ds">AI&DS</option>
                                             <hr>
                                             <option value="other">other</option>
                                         </select>
@@ -172,7 +172,12 @@
                                         <span id="emailError" style="color: red; display: none;">Please enter a valid email address.</span>
                                         <span id="emailSuccess" style="color: green; display: none;">Email address is valid.</span>
                                     </div>
-                                    <button type="button" onclick="clgstudend()" class="btn btn-primary w-100">Submit</button>
+                                    <button type="button" onclick="clgstudend()" class="btn btn-primary w-100" id="clgbtn">Submit</button>
+
+                                    <button class="btn btn-primary w-100" type="button" id="clgload" style="display: none;" disabled>
+                                        <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+                                        <span role="status">Loading...</span>
+                                    </button>
                                 </form>
                             </div>
                             <!-- fresher form -->

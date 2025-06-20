@@ -102,6 +102,7 @@ function login() {
     var cadpassword = document.getElementById("password").value;
 
     document.getElementById("logbtn").style.display="none";
+    document.getElementById("loglod").style.display="block";
 
     // get user data
     var apiUrl = 'https://script.google.com/macros/s/AKfycbyFI1ZO615dm7R4AAsd627Tf02YHdS8jLIXqwFFhSv29Dxg-8f3-a_ATM-N6AvUaNV1/exec';
@@ -185,6 +186,7 @@ function login() {
             else {
                 // alert("Login failed");
                 document.getElementById("logbtn").style.display="block";
+                 document.getElementById("loglod").style.display="none";
                 alertbox.render({
                     alertIcon: 'error',
                     title: 'Error!',
@@ -196,6 +198,7 @@ function login() {
         } 
         else {
             document.getElementById("logbtn").style.display="block";
+            document.getElementById("loglod").style.display="none";
             alertbox.render({
                 alertIcon: 'error',
                 title: 'Error!',
@@ -209,6 +212,7 @@ function login() {
     .catch(error => {
         console.error('Error:', error);
         document.getElementById("logbtn").style.display="block";
+        document.getElementById("loglod").style.display="none";
         alertbox.render({
             alertIcon: 'error',
             title: 'Error!',

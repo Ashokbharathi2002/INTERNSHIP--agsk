@@ -42,6 +42,11 @@ function clgstudend(){
     var clggenger = document.getElementById("clggenger").value;
     var sinname = document.getElementById("simname").value;
 
+    // hide the sub btn
+    document.getElementById("clgbtn").style.display="none";
+    // show loader
+    document.getElementById("clgload").style.display="block";
+
 
     // chacking all the fields are filled
     if (name == "" || email == "" || phone == "" || clgname == "" || clgyear == "" || clgbranch == "" || clglookingfor == "") {
@@ -52,8 +57,11 @@ function clgstudend(){
             btnTitle: 'Ok',
             border:true
         });
+        document.getElementById("clgbtn").style.display="block";
+        document.getElementById("clgload").style.display="none";
         return false;
     }
+
 
     fetch('https://api.telegram.org/bot7233018879:AAGKG3ZQhH9j0W4jC-gy50557C5ocR1_p_8/sendMessage', {
         method: 'POST',
@@ -89,10 +97,14 @@ function clgstudend(){
             document.getElementById("").innerHTML = name;
         } else {
             alert('Failed to send order details to Telegram.');
+            document.getElementById("clgbtn").style.display="block";
+             document.getElementById("clgload").style.display="none";
         }
     })
     .catch(error => {
         console.error('Error:', error);
+        document.getElementById("clgbtn").style.display="block";
+        document.getElementById("clgload").style.display="none";
     });
 }
 // fresher form
